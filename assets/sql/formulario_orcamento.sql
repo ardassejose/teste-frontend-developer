@@ -2,8 +2,8 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Tempo de geração: 28-Jul-2022 às 21:35
+-- Host: 127.0.0.1:3306
+-- Tempo de geração: 29-Jul-2022 às 21:34
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.1.6
 
@@ -28,19 +28,21 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `formulario_orcamento` (
-  `nomePessoa` varchar(120) DEFAULT NULL,
+  `nomePessoa` varchar(120) NOT NULL,
   `emailPessoa` varchar(60) DEFAULT NULL,
-  `telefone` int(11) DEFAULT NULL,
+  `telefone` text DEFAULT NULL,
   `descOrcamento` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `formulario_orcamento`
+-- Índices para tabelas despejadas
 --
 
-INSERT INTO `formulario_orcamento` (`nomePessoa`, `emailPessoa`, `telefone`, `descOrcamento`) VALUES
-('JOSE VICTOR ARDASSE MONTEIRO LIMA', 'josevictorps3lima@gmail.com', 2147483647, 'ok'),
-('Mariana Kelly Cabral Prado', 'mariana.kelly@gmail.com', 2147483647, 'Quero um site fake');
+--
+-- Índices para tabela `formulario_orcamento`
+--
+ALTER TABLE `formulario_orcamento`
+  ADD PRIMARY KEY (`nomePessoa`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

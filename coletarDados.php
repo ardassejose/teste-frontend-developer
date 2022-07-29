@@ -9,7 +9,7 @@
 
   // consulta SQL
   $sql = "INSERT INTO formulario_orcamento (nomePessoa, emailPessoa, telefone, descOrcamento)";
-  $sql .= "VALUES ('$nome', '$email', $telefone, '$descOrcamento');";
+  $sql .= "VALUES ('$nome', '$email', '$telefone', '$descOrcamento');";
 
   echo($sql);
 
@@ -18,7 +18,7 @@
   ?>
     <script>
       alert("Registro salvo com sucesso!");
-      window.location = "landingPage.php";
+      window.location = "index.php";
     </script>
   <?php
   } else {
