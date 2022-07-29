@@ -18,7 +18,7 @@
   ?>
     <script>
       alert("Registro salvo com sucesso!");
-      window.location = "landingPage.php";
+      window.location = "index.php";
     </script>
   <?php
   } else {
